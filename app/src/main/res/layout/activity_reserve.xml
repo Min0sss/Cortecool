@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RESERVE"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Servicio -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Servicio de Cortes:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/RDGCORTESR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/RDBNORMALR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Normal"/>
+
+            <RadioButton
+                android:id="@+id/RDBESCOLARR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Escolar"/>
+
+            <RadioButton
+                android:id="@+id/RDBMILITARR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Militar"/>
+
+            <RadioButton
+                android:id="@+id/RDBMODERNOR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moderno"/>
+        </RadioGroup>
+
+        <!-- Fecha -->
+        <EditText
+            android:id="@+id/EDTFECHAR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Seleccione fecha"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Hora -->
+        <EditText
+            android:id="@+id/EDTHORAR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Seleccione hora"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/BTNHORAR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Hora"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Botones -->
+        <Button
+            android:id="@+id/BTNCONFIRMAR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONFIRMAR"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/BTNREGRESAR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REGRESAR" />
+
+
+    </LinearLayout>
+</ScrollView>

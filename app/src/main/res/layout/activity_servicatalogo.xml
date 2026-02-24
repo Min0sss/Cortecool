@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Botón Catálogo -->
+        <Button
+            android:id="@+id/BTNCORTES"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuestro Catálogo de Cortes"
+            android:onClick="BotonCortes"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Botón Servicios -->
+        <Button
+            android:id="@+id/BTNUESERVI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuestros Servicios"
+            android:onClick="BotonServicios"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Botón Salir -->
+        <Button
+            android:id="@+id/BTNSALIR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SALIR"
+            android:onClick="BotonSalir"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- Texto Importante -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IMPORTANTE: La cobertura es solo para San Juan de Lurigancho."
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Versión -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CorteCool / Beta 1.0"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>

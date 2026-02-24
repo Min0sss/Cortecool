@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nuestros_servicios"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Reserva -->
+        <Button
+            android:id="@+id/BTNRESERVE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/reserve"
+            android:text="Reservar"
+            android:onClick="BotonReserve"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Fila de 2 botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/BTNDOMICILIO"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/domicilio"
+                android:text="Domicilio"
+                android:onClick="BotonDomicilio"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/BTNSERSOLI"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/serviciossolicitados"
+                android:text="Solicitados"
+                android:onClick="BotonSolicitados"/>
+        </LinearLayout>
+
+        <!-- Contacto -->
+        <Button
+            android:id="@+id/BTNCONTACTO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/contactanos"
+            android:text="Contáctanos"
+            android:onClick="BotonContactanos"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Usuarios -->
+        <Button
+            android:id="@+id/BTNUSUARIOS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="USUARIOS REGISTRADOS"
+            android:textStyle="bold"
+            android:onClick="BotonUsuarios"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Salir -->
+        <Button
+            android:id="@+id/BTNSALIDA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SALIR"
+            android:onClick="BotonSalir"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Versión -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cortecool 2026 - Beta 1.0"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,56 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android' // Actualizado
+    // id 'kotlin-android-extensions' <-- ELIMINADO: Ya no existe en 2026
+    id 'kotlin-parcelize' // Añade esto si usabas Parcelize en tus modelos
+}
+
+android {
+    // Definimos el namespace aquí (antes estaba en el Manifest)
+    namespace 'com.example.cortecool'
+
+    compileSdk 35 // Actualizado para 2026
+
+    defaultConfig {
+        applicationId "com.example.cortecool"
+        minSdk 24 // Subido ligeramente para mejor compatibilidad moderna
+        targetSdk 35 // Obligatorio para subir a la Play Store actualmente
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17 // Actualizado a Java 17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    // Si tu proyecto usa View Binding (muy recomendado en 2026)
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    // Las versiones han sido saltadas a las estables de finales de 2025/2026
+    implementation 'androidx.core:core-ktx:1.15.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+}
