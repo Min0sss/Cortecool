@@ -9,22 +9,20 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.cortecool.Controlers.CorteDAO
 import com.example.cortecool.Model.Usuario
-// 1. IMPORTANTE: Eliminamos el import de synthetic y usamos el binding generado
 import com.example.cortecool.databinding.ActivityRegistroBinding
 
 class RegistroActivity : AppCompatActivity()
 {
-    // 2. Declaramos la variable para el binding
+   
     private lateinit var binding: ActivityRegistroBinding
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        // 3. Inicializamos el binding
+
         binding = ActivityRegistroBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 4. Configuramos los listeners manualmente (opcional, pero recomendado en lugar de 'onClick' en XML)
         binding.btnRegistrar.setOnClickListener { BotonRegistrarR(it) }
         binding.btnSalir.setOnClickListener { BotonSalir(it) }
     }
@@ -32,7 +30,6 @@ class RegistroActivity : AppCompatActivity()
     fun BotonRegistrarR(g: View)
     {
         var sexo: String = ""
-        // 5. Ahora accedemos a través de 'binding'
         if (binding.rdbF.isChecked)
         {
             sexo = "Femenino"
@@ -45,7 +42,6 @@ class RegistroActivity : AppCompatActivity()
         val crud = CorteDAO(this)
         val nomb = binding.edtNombres.text.toString()
 
-        // Manejo de seguridad para evitar errores al convertir a Int si el campo está vacío
         val dni = binding.edtDni.text.toString().toIntOrNull() ?: 0
         val celular = binding.edtCelular.text.toString().toIntOrNull() ?: 0
 
